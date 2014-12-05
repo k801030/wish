@@ -5,25 +5,39 @@ var mongoose = require('mongoose');
 var Wisher   = mongoose.model('Wisher');
 
 
-router.post('/create', function create(req, res){
+router.post('/create', function createWisher(req, res){
+  wisher = req.body;
+  console.log(wisher);
   new Wisher({
-    name         : 'myname',
-    school_id    : 'myid'
+    id       : wisher.id,
+    name     : wisher.name,
+    school_id: wisher.school_id,
+    phone    : wisher.phone,
+    email    : wisher.email,
+    messages : wisher.messages
   }).save(function(err, Wisher, count){
     console.log('hi');
     res.send(true);
-  });
-    
+  }); 
 });
 
-router.get('/read', function index(req, res){
+router.get('/load', function indexWisher(req, res){
   Wisher.
   find().
   exec(function(err, wishers, count){
     res.send(wishers);
   });
-    
 });
+
+router.get('/delete/:id', function deleteWisher(req, res){
+  Wisher.findById(req.params.id, function(err,wisher){
+    wisher.remove(function(err, wisher){
+      res.send(true);
+    });
+  });
+});
+
+
 
 
 
