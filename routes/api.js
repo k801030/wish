@@ -16,8 +16,11 @@ router.post('/create', function createWisher(req, res){
     email    : wisher.email,
     messages : wisher.messages
   }).save(function(err, Wisher, count){
-    console.log('hi');
-    res.send(true);
+    console.log(err);
+    if(err)
+      res.send(false);
+    else
+      res.send(true);
   }); 
 });
 

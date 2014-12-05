@@ -15,22 +15,22 @@
   <div>
     <form ng-submit="create()">
       <div class="form-group">
-        <input class="form-control" placeholder="id" ng-model="data.id">
+        <input type="number" class="form-control" placeholder="id" ng-model="form.id">
       </div>
       <div class="form-group">
-        <input class="form-control" placeholder="name" ng-model="data.name">
+        <input class="form-control" placeholder="name" ng-model="form.name">
       </div>
       <div class="form-group">
-        <input class="form-control" placeholder="school id" ng-model="data.school_id">
+        <input class="form-control" placeholder="school id" ng-model="form.school_id">
       </div>
       <div class="form-group">
-        <input class="form-control" placeholder="phone" ng-model="data.phone">
+        <input class="form-control" placeholder="phone" ng-model="form.phone">
       </div>
       <div class="form-group">
-        <input class="form-control" placeholder="email" ng-model="data.email">
+        <input class="form-control" placeholder="email" ng-model="form.email">
       </div>
       <div class="form-group">
-        <textarea class="form-control" placeholder="messages" ng-model="data.messages"></textarea>
+        <textarea class="form-control" placeholder="messages" ng-model="form.messages"></textarea>
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>

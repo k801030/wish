@@ -5,7 +5,7 @@ var Wisher = new Schema({
   id: Number,
   name         : String,
   school_id    : String,
-  phone        : Number,
+  phone        : String,
   email        : String,
   messages     : String
 });
