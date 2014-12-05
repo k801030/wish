@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 var http = require('http');
 
 var routes = require('./routes/index');
-var wisher = require('./routes/wisher');
+var admin = require('./routes/admin');
 var users = require('./routes/users');
 var api = require('./routes/api');
 
@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/wisher', wisher);
+app.use('/admin', admin);
 app.use('/api', api);
 app.use('/users', users);
 
