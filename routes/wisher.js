@@ -25,6 +25,12 @@ router.get('/', function index(req, res) {
   });
 });
 
+router.get('/create', function create(req, res) {
+    res.render('create', {
+      title : 'Create Page',
+      });
+});
+
 
 
 module.exports = router;
