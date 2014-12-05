@@ -47,7 +47,7 @@
         <th class="">Messages</th>
         <th class=""></th>
       </tr>
-      <tr ng-repeat="wisher in wishers">
+      <tr ng-repeat="wisher in wishers | orderBy:'id':true">
         <td>{{wisher.id}} </td>
         <td>{{wisher.name}} </td>
         <td>{{wisher.school_id}} </td>
