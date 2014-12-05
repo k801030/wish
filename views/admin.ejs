@@ -10,8 +10,8 @@
 
 </head>
 <body ng-app="data-handler"  ng-controller="IndexController" data-ng-init="load()">
+  <p>此為管理者介面</p>
   <h1>資料表單</h1>
-  <p>Welcome to <%= title %></p>
   <div>
     <form ng-submit="create()">
       <div class="form-group">
@@ -32,7 +32,7 @@
       <div class="form-group">
         <textarea class="form-control" placeholder="messages" ng-model="form.messages"></textarea>
       </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" class="btn btn-default">輸入</button>
     </form>
   </div>
   <h1>資料庫</h1>
@@ -40,12 +40,12 @@
   <div>
     <table class="table table-condensed table-hover">
       <tr>
-        <th class="">No.</th>
-        <th class="">Name</th>
-        <th class="">School ID</th>
-        <th class="">Phone</th>
+        <th class="">編號</th>
+        <th class="">姓名</th>
+        <th class="">學號</th>
+        <th class="">電話</th>
         <th class="">Email</th>
-        <th class="">Messages</th>
+        <th class="">給他的訊息</th>
         <th class=""></th>
       </tr>
       <tr ng-repeat="wisher in wishers | orderBy:'id':true" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
