@@ -6,11 +6,21 @@ app.factory('WisherInfo', function(){
   }
 });
 
-app.controller('CreateController', ['$scope', '$http', function($scope, $http){
-  $scope.data = {};
-  
-
-}]);
+app.directive('ngConfirmClick', function () {
+  return {
+    priority: 1,
+    terminal: true,
+    link: function (scope, element, attr) {
+      var msg = attr.confirmationNeeded || "Are you sure?";
+      var clickAction = attr.ngClick;
+      element.bind('click',function () {
+        if ( window.confirm(msg) ) {
+          scope.$eval(clickAction)
+        }
+      });
+    }
+  };
+});
 
 app.controller('IndexController', ['$scope', '$http', function($scope, $http){
   $scope.wishers = {};
@@ -18,7 +28,6 @@ app.controller('IndexController', ['$scope', '$http', function($scope, $http){
   $scope.create = function(){
     $http.post('/api/create', $scope.data).
     success(function(data, status, headers, config) {
-      console.log('success');
       // load data again
       $scope.load();
     }).
@@ -31,7 +40,6 @@ app.controller('IndexController', ['$scope', '$http', function($scope, $http){
     $http.get('/api/load').
     success(function(data, status, headers, config){
       $scope.wishers = data;
-      console.log('success');
     }).
     error(function(data, status, headers, config){
       console.log('error');
@@ -41,7 +49,6 @@ app.controller('IndexController', ['$scope', '$http', function($scope, $http){
   $scope.delete = function(id){
     $http.get('/api/delete/'+id).
     success(function(data, status, headers, config){
-      console.log('success');
       // load data again
       $scope.load();
     }).

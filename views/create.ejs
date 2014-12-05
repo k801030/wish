@@ -54,7 +54,9 @@
         <td>{{wisher.phone}} </td>
         <td>{{wisher.email}} </td>
         <td>{{wisher.messages}} </td>
-        <td><button class="btn btn-danger" ng-click="delete(wisher._id)">Delete</button></td>
+        <td>
+          <button class="btn btn-danger" ng-click="delete(wisher._id)" ng-confirm-click="確認刪除?">Delete</button>
+        </td>
       </tr>
     </table>
   </div>
