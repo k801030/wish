@@ -3,7 +3,7 @@ var router   = express.Router();
 
 var mongoose = require('mongoose');
 var Wisher   = mongoose.model('Wisher');
-
+var fs = require('fs');
 
 router.post('/create', function createWisher(req, res){
   wisher = req.body;
@@ -37,6 +37,13 @@ router.get('/delete/:id', function deleteWisher(req, res){
     wisher.remove(function(err, wisher){
       res.send(true);
     });
+  });
+});
+
+router.get('/secretcode', function getCode(req, res){
+  fs.readFile('matchcode.json', 'utf8', function(err, data){
+    if(err) throw err;
+    res.send(data);
   });
 });
 
