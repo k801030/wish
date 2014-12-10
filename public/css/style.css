@@ -7,12 +7,65 @@ a {
   color: #00B7FF;
 }
 
-.btn-condensed{
+.btn-condensed {
   padding-top: 1px;
   padding-bottom: 1px;
   font-size: 12px;
 }
 
-tr{
+tr {
   min-height: 25px;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.card {
+  display: inline-block;
+  border: 1px solid #888;
+  margin: 5px;
+  margin-top: 20px;
+}
+
+.card > img {
+  width: 340px;
+  height: auto;
+}
+
+.card {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.card > .card-id {
+  margin-top: 2px;
+  margin-left: 298px;
+}
+
+.card > .card-code {
+  width: 100px;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-top: 135px;
+  margin-left: 120px;
+}
+
+.container-print {
+  width: 794px;
+}
+
+@media only screen and (-moz-min-device-pixel-ratio: 2), 
+       only screen and (-o-min-device-pixel-ratio: 2/1), 
+       only screen and (-webkit-min-device-pixel-ratio: 2), 
+       only screen and (min-device-pixel-ratio: 2) {
+ /*use CSS to swap out your low res images with high res ones here*/
+}   
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
 }
