@@ -9,6 +9,10 @@
   <link rel='stylesheet' href='/css/style.css' />
   <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'></head>
 <body ng-app="print"  ng-controller="printController" data-ng-init="load()">
+  <div class="height-A4">
+    <h1>This is blank page.</h1>
+    <h1>Please jump to next page</h1>
+  </div>
   <div class="container-print">
   <div class="card" ng-repeat="pair in data">
     <div class="absolute card-id">{{ pair.id }}</div>

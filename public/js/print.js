@@ -5,7 +5,7 @@ angular.module('print', [])
   $http.get('/api/secretcode')
   .success(function(data, status, headers, config){
     length = data.length;
-    size = 8; // per page
+    size = 10; // per page
     $scope.sequence = [];
     sortData = [];
     $scope.data = sortData;

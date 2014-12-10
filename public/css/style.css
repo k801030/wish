@@ -26,7 +26,7 @@ tr {
   border: 1px solid #888;
   padding: 2px;
   margin: 5px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .card > img {
@@ -54,6 +54,10 @@ tr {
 
 .container-print {
   width: 794px;
+}
+
+.height-A4 {
+  height: 1122px;
 }
 
 @media only screen and (-moz-min-device-pixel-ratio: 2), 
