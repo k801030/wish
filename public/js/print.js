@@ -4,10 +4,24 @@ angular.module('print', [])
   $scope.data;
   $http.get('/api/secretcode')
   .success(function(data, status, headers, config){
-    $scope.data = data;
+    length = data.length;
+    size = 10; // per page
+    $scope.sequence = [];
+    sortData = [];
+    $scope.data = sortData;
+    for(var i=0; i<length; i++){
+      var pos = Math.floor(i % (size));
+      var page = Math.floor(i / (size));
+      sortData[i] = data[page+pos*(length/size)];
+      console.log(i+" "+(page+pos*(length/size)));
+    }
+
+    
+
   })
   .error(function(data, status, headers, config){
 
   });
+
 
 }])

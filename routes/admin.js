@@ -8,7 +8,7 @@ router.get('/', function index(req, res) {
 });
 
 router.get('/print', function index(req, res) {
-  res.render('print', { title : 'Print Page' });
+  res.render('print', { title : '列印頁面' });
 });
 
 

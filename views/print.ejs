@@ -7,15 +7,17 @@
   <script src="/js/print.js"></script>
   <link rel='stylesheet' href='/css/bootstrap.css'/>
   <link rel='stylesheet' href='/css/style.css' />
-
-</head>
+  <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'></head>
 <body ng-app="print"  ng-controller="printController" data-ng-init="load()">
-  <div class="container">
-  <p>此為列印介面</p>
-  <h1>列印介面</h1>
-
-  <div ng-repeat="pair in data">
-  {{ pair.id }} {{ pair.code}}
+  <div class="height-A4">
+    <h1>This is blank page.</h1>
+    <h1>Please jump to next page</h1>
+  </div>
+  <div class="container-print">
+  <div class="card" ng-repeat="pair in data">
+    <div class="absolute card-id">{{ pair.id }}</div>
+    <div class="absolute card-code">{{ pair.code }}</div>
+    <img src="/images/card.png">
   </div>
   </div>
 
