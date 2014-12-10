@@ -9,12 +9,18 @@
     <link rel='stylesheet' href='/css/style.css' />
 
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <button class="btn btn-default"> I want to Enter Code</button>
-    <section id="page2">
-      <% include ../views/page2 %>
+<body ng-app>
+  <div ng-init="section = 'index'">
+    <section id="wish-page" ng-show="section == 'index'">
+      <% include ../views/main/index %>
     </section>
-  </body>
+
+    <section id="wish-page" ng-show="section == 'form'">
+      <% include ../views/main/form %>
+    </section>
+    <section id="result-page" ng-show="section == 'result'">
+      <% include ../views/main/result %>
+    </section>
+  </div>
+</body>
 </html>
