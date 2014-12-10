@@ -6,19 +6,19 @@
     <script src="/js/angular.min.js"></script>
     <script src="/js/data-handler.js"></script>
     <link rel='stylesheet' href='/css/bootstrap.css'/>
-    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='stylesheet' href='/css/main.css' />
 
   </head>
 <body ng-app>
-  <div ng-init="section = 'index'">
-    <section id="wish-page" ng-show="section == 'index'">
+  <div class="container" ng-init="section = 'index'">
+    <section id="wish-page" class="col-sm-offset-3 col-sm-6" ng-show="section == 'index'">
       <% include ../views/main/index %>
     </section>
 
-    <section id="wish-page" ng-show="section == 'form'">
+    <section id="wish-page" class="col-sm-offset-3 col-sm-6" ng-show="section == 'form'">
       <% include ../views/main/form %>
     </section>
-    <section id="result-page" ng-show="section == 'result'">
+    <section id="result-page" class="col-sm-offset-3 col-sm-6" ng-show="section == 'result'">
       <% include ../views/main/result %>
     </section>
   </div>
