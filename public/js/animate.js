@@ -7,9 +7,8 @@ $(function (){
   );
   wow.init();
   setBackgroundHeight();
-  var op = 1;
   $( window ).scroll(function() {
-    var speed = 1.2;
+    var speed = 1.1;
     var position = $(document).scrollTop();
     var move = position / speed;
     //$('#log').html('move:'+move+" position:"+position);
