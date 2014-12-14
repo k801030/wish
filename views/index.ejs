@@ -9,18 +9,18 @@
     <link rel='stylesheet' href='/css/layout.css' />
 
   </head>
-<body ng-app>
-  <div class="container" ng-init="section = 'index'">
-    <section id="wish-page" ng-show="section == 'index'">
+<body ng-app ng-init="section = 'index'">
+  
+    <section id="home" class="col-sm-12" ng-show="section == 'index'">
       <% include ../views/main/index %>
     </section>
 
-    <section id="wish-page" class="col-sm-offset-3 col-sm-6" ng-show="section == 'info'">
+    <section id="info" class="col-sm-12">
       <% include ../views/main/info %>
     </section>
-    <section id="result-page" class="col-sm-offset-3 col-sm-6" ng-show="section == 'catch'">
+    <section id="catch" class="col-sm-12">
       <% include ../views/main/catch %>
     </section>
-  </div>
+  
 </body>
 </html>
