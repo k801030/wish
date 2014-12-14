@@ -28,11 +28,17 @@ section.last {
   float: none;
 }
 
+.top-5 {
+  margin-top: 5%;
+}
 .top-10 {
-  top: 10%;
+  margin-top: 10%;
+}
+.top-15 {
+  margin-top: 15%;
 }
 .top-20 {
-  top: 20%;
+  margin-top: 20%;
 }
 
 /*  Position  */
