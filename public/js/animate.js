@@ -6,4 +6,21 @@ $(function (){
     }
   );
   wow.init();
+  setBackgroundHeight();
+
+  $( window ).scroll(function() {
+    var speed = 1.5;
+    var position = $(document).scrollTop();
+    var move = position / speed;
+    //$('#log').html('move:'+move+" position:"+position);
+    //$('#log').css('top', position);
+    $('#bg').css('backgroundPosition', '0px ' + move + 'px');  
+    setBackgroundHeight();
+  });
+
+  function setBackgroundHeight() {
+    $('#bg').css('height', $(document).height() + 'px');
+  }
+  
+
 });
