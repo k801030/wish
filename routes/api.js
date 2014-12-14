@@ -8,6 +8,7 @@ var fs = require('fs');
 router.post('/create', function createWisher(req, res){
   wisher = req.body;
   console.log(wisher);
+  
   new Wisher({
     id       : wisher.id,
     name     : wisher.name,

@@ -25,8 +25,12 @@ app.directive('ngConfirmClick', function () {
 app.controller('IndexController', ['$scope', '$http', function($scope, $http){
   $scope.wishers = [];
   $scope.form = {};
+  $scope.focus = function(id) {
+    var elem = document.getElementById(id);
+    elem.focus();
+  }
   // create data
-  $scope.create = function(){
+  $scope.create = function() {
     $http.post('/api/create', $scope.form).
     success(function(data, status, headers, config) {      
       $scope.form = {};
@@ -37,7 +41,7 @@ app.controller('IndexController', ['$scope', '$http', function($scope, $http){
     });
   };
 
-  $scope.load = function(){
+  $scope.load = function() {
     $http.get('/api/load').
     success(function(data, status, headers, config){
       $scope.wishers = data;
@@ -47,7 +51,7 @@ app.controller('IndexController', ['$scope', '$http', function($scope, $http){
     });
   };
 
-  $scope.delete = function(id){
+  $scope.delete = function(id) {
     $http.get('/api/delete/'+id).
     success(function(data, status, headers, config){
       // load data again
@@ -58,7 +62,7 @@ app.controller('IndexController', ['$scope', '$http', function($scope, $http){
     });
   };
 
-  $scope.clear = function(){
+  $scope.clear = function() {
 
   }
 }]);

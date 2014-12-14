@@ -13,12 +13,12 @@
   <p>此為管理者介面</p>
   <h1>資料表單</h1>
   <div>
-    <form ng-submit="create()">
+    <form ng-submit="create();focus('input-id');">
     <table class="table">
 
       <tr>
         <td class="form-group col-md-1">
-          <input class="form-control" placeholder="編號" ng-model="form.id">
+          <input id="input-id" class="form-control" placeholder="編號" ng-model="form.id">
         </td>
         <td class="form-group col-md-2">
           <input class="form-control" placeholder="姓名" ng-model="form.name">
@@ -37,7 +37,6 @@
         </td>
       </tr>
     </table>
-      
     </form>
   </div>
   <h1>資料庫</h1>
