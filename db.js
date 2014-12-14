@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
 var Wisher = new Schema({
-  id: Number,
+  id: String,
   name         : String,
   school_id    : String,
   phone        : String,
