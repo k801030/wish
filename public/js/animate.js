@@ -7,14 +7,18 @@ $(function (){
   );
   wow.init();
   setBackgroundHeight();
-
+  var op = 1;
   $( window ).scroll(function() {
-    var speed = 1.5;
+    var speed = 1.2;
     var position = $(document).scrollTop();
     var move = position / speed;
     //$('#log').html('move:'+move+" position:"+position);
     //$('#log').css('top', position);
-    $('#bg').css('backgroundPosition', '0px ' + move + 'px');  
+    $('#bg').css('backgroundPosition', '0px ' + move + 'px');
+    /*$('#bg').animate({
+      'background-position-y':  move + 'px'
+    },20,'linear');
+    console.log('d');*/
     setBackgroundHeight();
   });
 
