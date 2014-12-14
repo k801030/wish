@@ -14,25 +14,30 @@
   <h1>資料表單</h1>
   <div>
     <form ng-submit="create()">
-      <div class="form-group">
-        <input type="number" class="form-control" placeholder="id" ng-model="form.id">
-      </div>
-      <div class="form-group">
-        <input class="form-control" placeholder="name" ng-model="form.name">
-      </div>
-      <div class="form-group">
-        <input class="form-control" placeholder="school id" ng-model="form.school_id">
-      </div>
-      <div class="form-group">
-        <input class="form-control" placeholder="phone" ng-model="form.phone">
-      </div>
-      <div class="form-group">
-        <input class="form-control" placeholder="email" ng-model="form.email">
-      </div>
-      <div class="form-group">
-        <textarea class="form-control" placeholder="messages" ng-model="form.messages"></textarea>
-      </div>
-      <button type="submit" class="btn btn-default">輸入</button>
+    <table class="table">
+
+      <tr>
+        <td class="form-group col-md-1">
+          <input class="form-control" placeholder="編號" ng-model="form.id">
+        </td>
+        <td class="form-group col-md-2">
+          <input class="form-control" placeholder="姓名" ng-model="form.name">
+        </td>
+        <td class="col-md-2">
+         <input class="form-control" placeholder="學號" ng-model="form.school_id">
+        </td>
+        <td class="col-md-2">
+          <input class="form-control" placeholder="電話" ng-model="form.phone">
+        </td>
+        <td class="col-md-2">
+          <input class="form-control" placeholder="Email" ng-model="form.email">
+        </td>
+        <td class="col-md-2">
+          <button type="submit" class="btn btn-default">輸入</button>
+        </td>
+      </tr>
+    </table>
+      
     </form>
   </div>
   <h1>資料庫</h1>
@@ -40,13 +45,12 @@
   <div>
     <table class="table table-condensed table-hover">
       <tr>
-        <th class="">編號</th>
-        <th class="">姓名</th>
-        <th class="">學號</th>
-        <th class="">電話</th>
-        <th class="">Email</th>
-        <th class="">給他的訊息</th>
-        <th class=""></th>
+        <th class="col-md-1">編號</th>
+        <th class="col-md-2">姓名</th>
+        <th class="col-md-2">學號</th>
+        <th class="col-md-2">電話</th>
+        <th class="col-md-2">Email</th>
+        <th class="col-md-1"></th>
       </tr>
       <tr ng-repeat="wisher in wishers | orderBy:'id':true" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
         <td>{{wisher.id}} </td>
@@ -54,9 +58,8 @@
         <td>{{wisher.school_id}} </td>
         <td>{{wisher.phone}} </td>
         <td>{{wisher.email}} </td>
-        <td>{{wisher.messages}} </td>
         <td>
-          <div ng-show="hover">
+          <div ng-style="{opacity : hover ? 1 : 0}">
             <button class="btn btn-danger btn-condensed" ng-click="delete(wisher._id)" ng-confirm-click="確認刪除?">Delete</button>
           </div>
         </td>

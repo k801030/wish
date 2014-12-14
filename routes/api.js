@@ -14,7 +14,6 @@ router.post('/create', function createWisher(req, res){
     school_id: wisher.school_id,
     phone    : wisher.phone,
     email    : wisher.email,
-    messages : wisher.messages
   }).save(function(err, Wisher, count){
     console.log(err);
     if(err)
