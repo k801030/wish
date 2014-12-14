@@ -60,12 +60,24 @@ section.last {
   position: absolute;
 }
 
+#info-dialog > .text
+{
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 20%;
+  color: #333;
+  border: 1px solid #333;
+  word-wrap: break-word; word-break: normal;
+}
+
 #catch-girl {
   margin-left: -100px;
 }
 
 #catch-dialog {
 }
+
 
 /*  Other  */ 
 
@@ -75,5 +87,13 @@ img {
 
 .my-form-control {
   height: 40px;
-  margin: 5px;
+  margin: 7px;
+}
+
+.my-form {
+  margin-top: 30px;
+}
+
+input {
+  text-align: center;
 }
