@@ -12,15 +12,30 @@ section {
   text-align: center;
 }
 
-section#home,
-section#info,
-section#catch {
+section {
   width: 100%;
   height: 100%; 
+  margin-bottom: 70px;
+}
+
+section.last {
+  margin-bottom: 0px;
 }
 
 .border :hover {
   background: rgba(255, 255, 255, 0.3) ;
+}
+
+.center {
+  margin: 0 auto;
+  float: none;
+}
+
+.top-10 {
+  top: 10%;
+}
+.top-20 {
+  top: 20%;
 }
 
 /*  Position  */
@@ -35,16 +50,27 @@ section#catch {
 
 #info-girl {
   position: absolute;
-  bottom: 0px;
+  bottom: 10%;
 }
 
 #info-dialog {
   position: absolute;
 }
 
+#catch-girl {
+  margin-left: -100px;
+}
+
+#catch-dialog {
+}
 
 /*  Other  */ 
 
 img {
   max-width: 100%;
+}
+
+.my-form-control {
+  height: 40px;
+  margin: 5px;
 }
