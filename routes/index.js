@@ -22,12 +22,12 @@ router.post('/checkCode', function checkCode(req, res) {
       if(code == matchcodes[i].code){
         isFind = true;
         Wisher.findOne({ 'id' : matchcodes[i].id }, function(err,wisher){
-          res.send(wisher);
+          res.send({'status':true, 'wisher':wisher});
         });
       }
     }
     if(!isFind)
-      res.send(false);
+      res.send({'status':false});
   });
 });
 

@@ -9,6 +9,7 @@ $(function (){
   //SmoothScrolling();
   setBackgroundHeight();
   
+
   $( window ).scroll(function() {
     var speed = 100;
     var position = $(document).scrollTop();

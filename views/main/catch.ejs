@@ -1,7 +1,7 @@
 
 
 <div class="col-sm-push-1 col-sm-3 top-20 wow fadeInLeft" data-wow-duration="1s">
-  <div id="catch-dialog" class="dialog">
+  <div id="catch-dialog" class="dialog" ng-class="{'fadeOut': enter,'animated': enter}">
     <div class="text"><div class="text-inner">   
       <p>填入領取的幸運碼，便可以獲得許願人的資料囉！</p>
     </div></div>
@@ -13,17 +13,38 @@
 </div>
 
 <div class="col-sm-4 center top-10 wow fadeInUp">
-  <h1>找到你的許願人</h1>
-  <form class="col-sm-9 center my-form">
-  <input class="form-control my-form-control" type="text" placeholder="填入幸運碼" ng-model="code" ng-focus="clearWaring()">
-  <button type="button" class="btn btn-default form-control my-form-control" ng-click="check()">送出</button>
-  <div ng-show="showMsg">
-    {{ message }}
+  <div id="catch-before" ng-class="{'fadeOut': enter,'animated': enter}">
+    <h1>找到你的許願人</h1>
+    <form ng-submit="check()" class="col-sm-9 center my-form">
+    <input class="form-control my-form-control" type="text" placeholder="填入幸運碼" ng-model="code" ng-change="clearWaring()" ng-focus="clearWaring()">
+    <button type="submit" class="btn btn-default form-control my-form-control">送出</button>
+    <div ng-show="showMsg">
+      {{ message }}
+    </div>
+    
+    </form>
   </div>
-  <div ng-hide="true">
-    <input class="form-control">
+  <div id="catch-after" ng-hide="!enter" ng-class="{'fadeIn': enter,'animated': enter}">
+    <h1>你的許願人資料</h1>
+    <table class="col-sm-9 center table my-form">
+      <tr class="first-row">
+        <td class="col-sm-4">姓名</td>
+        <td class="col-sm-8">{{ wisherInfo.name }}</td>
+      </tr>
+      <tr>
+        <td class="col-sm-4">系級</td>
+        <td class="col-sm-8">{{ wisherInfo.school_id }}</td>
+      </tr>
+      <tr>
+        <td class="col-sm-4">電話</td>
+        <td class="col-sm-8">{{ wisherInfo.phone }}</td>
+      </tr>
+      <tr>
+        <td class="col-sm-4">Email</td>
+        <td class="col-sm-8">{{ wisherInfo.email}}</td>
+      </tr>
+    </table>
   </div>
-  </form>
 </div>
 
 </div>

@@ -1,7 +1,7 @@
 html, body {
   color: #ddd;
   height: 100%;
-  background-color: #fff;
+  background-color: #0c1425;
 }
 
 nav {
@@ -110,6 +110,11 @@ section.last {
   z-index: 1;
 }
 
+#catch-before,
+#catch-after {
+  position: absolute;
+}
+
 .text-inner {
   
 }
@@ -118,6 +123,9 @@ section.last {
   position: absolute;
 }
 
+.hide {
+  opacity: 0;
+}
 /*  Other  */ 
 
 img {
