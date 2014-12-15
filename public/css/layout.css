@@ -4,8 +4,23 @@ html, body {
   background-color: #fff;
 }
 
+nav {
+  position: fixed;
+  padding-top: 5px;
+  width: 100%;
+  height: 7%;
+  z-index: 10;
+  opacity: 0;
+}
+
+nav > .logo {
+  height: 100%;
+  margin-left: 50%;
+
+}
+
 #bg {
-  position: absolute;
+  position: fixed;
   background-image: url('/images/bg.png');
   padding: 0px;
   margin: 0px;
@@ -61,11 +76,12 @@ section.last {
 
 #info-girl {
   position: absolute;
-  bottom: 10%;
+  bottom: 25%;
 }
 
 #info-dialog {
   position: absolute;
+  bottom: 25%;
 }
 
 #info-dialog > .text
@@ -74,9 +90,7 @@ section.last {
   width: 80%;
   height: 80%;
   top: 17%;
-  color: #0c2640;
   z-index: 1;
-  word-wrap: break-word; word-break: normal;
 }
 
 #catch-girl {
@@ -84,18 +98,20 @@ section.last {
 }
 
 #catch-dialog {
+
 }
 
 #catch-dialog > .text
 {
   position: absolute;
-  width: 70%;
-  height: 80%;
-  top: 12%;
-  margin-left: 7%;
-  color: #0c2640;
+  width: 80%;
+  height: auto;
+  top: 10%;
   z-index: 1;
-  word-wrap: break-word; word-break: normal;
+}
+
+.text-inner {
+  
 }
 
 #log {
@@ -130,6 +146,13 @@ input {
 span.title {
   font-weight: 700;
 }
+span.title {
+  font-size: 22px;
+}
+
+p {
+  font-size: 12px;
+}
 
 @media (min-width: 768) {
   span.title {
@@ -150,7 +173,7 @@ span.title {
   }
 }
 
-@media (min-width: 1124px) {
+@media (min-width: 1314px) {
   span.title {
     font-size: 42px;
   }

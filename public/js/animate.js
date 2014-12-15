@@ -6,11 +6,13 @@ $(function (){
     }
   );
   wow.init();
+  //SmoothScrolling();
   setBackgroundHeight();
+  
   $( window ).scroll(function() {
-    var speed = 1.1;
+    var speed = 100;
     var position = $(document).scrollTop();
-    var move = position / speed;
+    var move = - position * (speed / 1000);
     //$('#log').html('move:'+move+" position:"+position);
     //$('#log').css('top', position);
     $('#bg').css('backgroundPosition', '0px ' + move + 'px');
@@ -19,10 +21,19 @@ $(function (){
     },20,'linear');
     console.log('d');*/
     setBackgroundHeight();
+    var elem = $('#home-logo, #home-time');
+    setFadeOut(elem, position);
+    
   });
 
   function setBackgroundHeight() {
     $('#bg').css('height', $(document).height() + 'px');
+  }
+
+  function setFadeOut(elem, position){
+    var start_pos = elem.offset().top;
+    var end_pos = elem.offset().top + elem.height();
+    elem.css('opacity',(end_pos - position)/(end_pos - start_pos));
   }
   
 
