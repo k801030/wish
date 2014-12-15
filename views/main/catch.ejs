@@ -1,4 +1,5 @@
 
+<div class="loading" ng-show="enter"></div>
 
 <div class="col-sm-push-1 col-sm-3 top-20 wow fadeInLeft" data-wow-duration="1s">
   <div id="catch-dialog" class="dialog" ng-class="{'fadeOut': enter,'animated': enter}">
@@ -24,7 +25,7 @@
     
     </form>
   </div>
-  <div id="catch-after" ng-hide="!enter" ng-class="{'fadeIn': enter,'animated': enter}">
+  <div id="catch-after" ng-show="finish" ng-class="{'fadeIn': finish,'animated': finish}">
     <h1>你的許願人資料</h1>
     <table class="col-sm-9 center table my-form">
       <tr class="first-row">

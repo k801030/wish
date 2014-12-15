@@ -8,7 +8,6 @@ $(function (){
   wow.init();
   //SmoothScrolling();
   setBackgroundHeight();
-  
 
   $( window ).scroll(function() {
     var speed = 100;
@@ -36,6 +35,7 @@ $(function (){
     var end_pos = elem.offset().top + elem.height();
     elem.css('opacity',(end_pos - position)/(end_pos - start_pos));
   }
+  
   
 
 });

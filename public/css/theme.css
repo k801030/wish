@@ -21,6 +21,25 @@
 }
 
 
+.loading {
+  position: absolute;
+  background-image: url('/images/loading.png');
+  background-size: cover;
+  margin-top: 0%;
+  margin-left: 0%;
+  width: 15px;
+  height: 15px;
+  -webkit-animation-name: thumb;
+  -webkit-animation-duration: 1000ms;
+  -webkit-transform-origin:50% 50%;
+  -webkit-animation-iteration-count: infinite; /* The magic keyword for infinite*/
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes thumb {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
 
 .star {
   position: fixed;
