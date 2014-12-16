@@ -8,6 +8,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var http = require('http');
+var flash = require('flash');
+var session = require('express-session');
+var passport = require('passport');
+var localStrategy = require('passport-local').Strategy;
 
 var index = require('./routes/index');
 var admin = require('./routes/admin');
@@ -28,9 +32,52 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+    secret: 'ntusa-1234567',
+    resave: true,
+    saveUninitialized: true
+}));
+// passport
+var _user = {
+    id: "ntusa",
+    psw: "2014"
+}
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
+passport.deserializeUser(function(id, done) {
+  if( _user.id == id){
+    done(null, _user);
+  };
+});
+passport.use(new localStrategy(
+    function(username, password, done){
+        
+        if(_user.id == username && _user.psw == password){
+            return done(null, _user);
+        }else {
+            return done(null, false, { message: "incorrect"});
+        }
+    }
+));
+
 app.use('/', index);
-app.use('/admin', admin);
-app.use('/api', api);
+app.use('/admin', logged, admin);
+app.use('/api', logged, api);
+app.post('/checkAuth', passport.authenticate('local', { successRedirect: '/admin',
+                                   failureRedirect: '/login',
+                                   failureFlash: true }));
+passport.authenticate('local', { failureFlash: 'Invalid username or password.' });
+function logged(req, res, next) {
+    if (req.user) {
+        next();
+    } else {
+        res.redirect('/login');
+    }
+}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

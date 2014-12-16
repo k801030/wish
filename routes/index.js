@@ -8,6 +8,10 @@ router.get('/', function(req, res) {
   res.render('index', { title: '星祈 — 耶誕許願' });
 });
 
+router.get('/login', function(req, res) {
+  res.render('login', { title: '星祈 — 管理登入' });
+});
+
 router.post('/checkCode', function checkCode(req, res) {
   code = req.body.code;
   var matchcodes;
