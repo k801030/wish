@@ -18,7 +18,7 @@ $(function (){
     //$('#log').css('top', position);
     $('#bg').css('backgroundPosition', '0px ' + move + 'px');
 
-    $('#ntusa').css('top', (ntusa_start+move2) + 'px');
+    /*$('#ntusa').css('top', (ntusa_start+move2) + 'px');*/
     /*$('#bg').animate({
       'background-position-y':  move + 'px'
     },20,'linear');

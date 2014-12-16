@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= title %></title>
     <link rel="shortcut icon" href="images/icon.png"/>
     <script src="/js/angular.min.js"></script>
@@ -11,7 +12,7 @@
     <script src="/js/jquery-ui.min.js"></script>
     <script src="/js/smoothScrolling.js"></script>
     <script src="/js/animate.js"></script>
-    <link rel='stylesheet' href='/css/bootstrap.css'/>
+    <link rel='stylesheet' href='/css/bootstrap.min.css'/>
     <link rel="stylesheet" href="/css/animate.css">
     <link rel='stylesheet' href='/css/layout.css' />
     <link rel="stylesheet" href="/css/theme.css">
@@ -21,9 +22,10 @@
 
   </head>
 <body ng-app="catch" ng-init="section = 'index'">
-  <% include ../views/main/nav %>
   <div id="bg"></div>
-  <div id="ntusa"></div>
+  <div class="container">
+  <% include ../views/main/nav %>
+  <!--<div id="ntusa"></div>-->
   <section id="home" class="col-sm-12 col-xs-12 top-10 smooth" ng-show="section == 'index'">
     <% include ../views/main/index %>
   </section>
@@ -34,5 +36,6 @@
   <section id="catch" class="col-sm-12 col-xs-12 top-10 last smooth" ng-controller="CatchController">
     <% include ../views/main/catch %>
   </section>
+</div>
 </body>
 </html>

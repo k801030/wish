@@ -34,7 +34,7 @@ div {
 
 section {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 15%;
   width: 100%;
   height: 100%; 
 }
@@ -52,6 +52,8 @@ section.last {
   float: none;
 }
 
+@media screen and (min-width: 701px) {
+
 .top-5 {
   margin-top: 5%;
 }
@@ -67,6 +69,7 @@ section.last {
 .bottom-10 {
   margin-bottom: 10%;
 }
+}
 /*  Position  */
 
 #home-logo {
@@ -76,7 +79,6 @@ section.last {
 #home-time {
   display: inline-block;
 }
-
 #info-dialog > .text
 {
   position: absolute;
@@ -176,6 +178,7 @@ p {
 @media screen and (min-width: 701px) {
   #info-girl {
     position: absolute;
+    left: 10%;
     bottom: 25%;
   }
 
@@ -202,25 +205,35 @@ p {
 }
 
 /* for mobile */
-
+@media screen and (max-device-width: 480px){
+  section {
+    padding-bottom: 12%;
+  }
   .bottom-m-0 {
     position: absolute;
-    bottom: 0px;
+    bottom: 10%;
   }
   #info-dialog {
     overflow: hidden;
+    height: 80%;
+    width: 100%;
   }
   #info-dialog > .text {
     top: 10%;
     left: 10%;
     width: 70%;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 5px;
+  }
+  #info-dialog > img {
+    display: none;
   }
   #info-dialog, #info-girl, #catch-dialog, #catch-girl {
     position: relative;
     float: left;
   }
   #catch-dialog {
-    display: none;
+    opacity: 0;
   }
   #catch-dialog > .text
   {
@@ -238,14 +251,23 @@ p {
 
   #catch-before, #catch-after {
     position: relative;
-    margin-top: 25%;
+    margin-top: 5%;
   }
 
-  #home-logo, #home-time {
+  #home-logo {
     margin-top: 25%;
+  }
+  #home-time {
+    margin-top: 5%;
   }
 
   #catch-before,
   #catch-after {
     position: absolute;
   }
+}
+
+.log {
+  position: absolute;
+  z-index: 10;
+}
