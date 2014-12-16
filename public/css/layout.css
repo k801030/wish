@@ -64,7 +64,9 @@ section.last {
 .top-20 {
   margin-top: 20%;
 }
-
+.bottom-10 {
+  margin-bottom: 10%;
+}
 /*  Position  */
 
 #home-logo {
@@ -75,16 +77,6 @@ section.last {
   display: inline-block;
 }
 
-#info-girl {
-  position: absolute;
-  bottom: 25%;
-}
-
-#info-dialog {
-  position: absolute;
-  bottom: 25%;
-}
-
 #info-dialog > .text
 {
   position: absolute;
@@ -93,15 +85,6 @@ section.last {
   top: 17%;
   z-index: 1;
 }
-
-#catch-girl {
-  margin-left: -100px;
-}
-
-#catch-dialog {
-
-}
-
 #catch-dialog > .text
 {
   position: absolute;
@@ -111,11 +94,6 @@ section.last {
   margin-left: 5%;
   z-index: 1;
   text-align: center;
-}
-
-#catch-before,
-#catch-after {
-  position: absolute;
 }
 
 .text-inner {
@@ -191,5 +169,85 @@ p {
 
   p {
     font-size: 20px;
+  }
+}
+
+/* for tablet */
+@media screen and (min-width: 701px) {
+  #info-girl {
+    position: absolute;
+    bottom: 25%;
+  }
+
+  #info-dialog {
+    position: absolute;
+    bottom: 25%;
+  }
+
+  
+
+  #catch-girl {
+    margin-left: -100px;
+  }
+
+  #catch-dialog {
+
+  }
+  
+
+  #catch-before,
+  #catch-after {
+    position: absolute;
+  }
+}
+
+/* for mobile */
+
+@media screen and (max-width: 700px) {
+  .bottom-m-0 {
+    position: absolute;
+    bottom: 0px;
+  }
+  #info-dialog {
+    overflow: hidden;
+  }
+  #info-dialog > .text {
+    top: 10%;
+    left: 10%;
+    width: 70%;
+  }
+  #info-dialog, #info-girl, #catch-dialog, #catch-girl {
+    position: relative;
+    float: left;
+  }
+  #catch-dialog {
+    display: none;
+  }
+  #catch-dialog > .text
+  {
+    position: absolute;
+    width: 75%;
+    height: auto;
+    margin-left: 5%;
+    z-index: 1;
+    text-align: center;
+  }
+  #catch-girl {
+    position: absolute;
+    bottom: 5%;
+  }
+
+  #catch-before, #catch-after {
+    position: relative;
+    margin-top: 25%;
+  }
+
+  #home-logo, #home-time {
+    margin-top: 25%;
+  }
+
+  #catch-before,
+  #catch-after {
+    position: absolute;
   }
 }
