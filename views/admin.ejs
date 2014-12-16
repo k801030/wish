@@ -43,16 +43,16 @@
   <h1>資料庫</h1>
   
   <div>
-    <table class="table table-condensed table-hover">
+    <table class="table table-condensed table-hover" ng-init="predicate='id',reverse=false">
       <tr>
-        <th class="col-md-1">編號</th>
-        <th class="col-md-2">姓名</th>
-        <th class="col-md-2">系級</th>
-        <th class="col-md-2">電話</th>
-        <th class="col-md-2">Email</th>
+        <th class="col-md-1"><a href="" ng-click="reverse=!reverse;predicate='id'">編號</a></th></th>
+        <th class="col-md-2"><a href="" ng-click="reverse=!reverse;predicate='name'">姓名</a></th>
+        <th class="col-md-2"><a href="" ng-click="reverse=!reverse;predicate='school_id'">系級</a></th>
+        <th class="col-md-2"><a href="" ng-click="reverse=!reverse;predicate='phone'">電話</a></th>
+        <th class="col-md-2"><a href="" ng-click="reverse=!reverse;predicate='email'">Email</a></th>
         <th class="col-md-1"></th>
       </tr>
-      <tr ng-repeat="wisher in wishers | orderBy:'id':true" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+      <tr ng-repeat="wisher in wishers | orderBy:predicate:reverse" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
         <td>{{wisher.id}} </td>
         <td>{{wisher.name}} </td>
         <td>{{wisher.school_id}} </td>
