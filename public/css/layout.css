@@ -203,7 +203,6 @@ p {
 
 /* for mobile */
 
-@media screen and (max-width: 700px) {
   .bottom-m-0 {
     position: absolute;
     bottom: 0px;
@@ -250,4 +249,3 @@ p {
   #catch-after {
     position: absolute;
   }
-}
