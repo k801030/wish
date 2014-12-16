@@ -1,3 +1,7 @@
+html, body {
+  font-family: 'Microsoft YaHei', sans-serif;
+}
+
 #info-dialog > .text,
 #catch-dialog > .text {
   color: #0c2640;
