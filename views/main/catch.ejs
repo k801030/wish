@@ -1,8 +1,12 @@
 
 <div class="loading" ng-show="enter"></div>
-<div class="col-offset-4 col-sm-4 col-xs-12 center top-10 wow fadeInUp">
-  <div id="catch-before" ng-class="{'fadeOut': enter,'animated': enter}">
+
+
+
+<div class="col-offset-3 col-sm-6 col-xs-12 center top-10 wow fadeInUp">
+  <div id="catch-before" class="col-sm-12" ng-class="{'fadeOut': enter,'animated': enter}">
     <h1>找到你的許願人</h1>
+    <h4>填入領取的幸運碼，便可以獲得許願人的資料囉！</h4>
     <form ng-submit="check()" class="col-sm-9 col-xs-8 center my-form">
     <input class="form-control my-form-control" type="text" placeholder="填入幸運碼" ng-model="code" ng-change="clearWaring()" ng-focus="clearWaring()">
     <button type="submit" class="btn btn-default form-control my-form-control">送出</button>
@@ -12,16 +16,13 @@
     
     </form>
   </div>
-  <div id="catch-after" ng-show="finish" ng-class="{'fadeIn': finish,'animated': finish}">
+
+  <div id="catch-after" class="col-sm-12" ng-show="finish" ng-class="{'fadeIn': finish,'animated': finish}">
     <h1>你的許願人資料</h1>
     <table class="col-sm-9 col-xs-8 center table my-form">
       <tr class="first-row">
         <td class="col-sm-4">姓名</td>
         <td class="col-sm-8">{{ wisherInfo.name }}</td>
-      </tr>
-      <tr>
-        <td class="col-sm-4">系級</td>
-        <td class="col-sm-8">{{ wisherInfo.school_id }}</td>
       </tr>
       <tr>
         <td class="col-sm-4">電話</td>
@@ -41,7 +42,6 @@
     <div class="col-sm-12 col-xs-12 text"><div class="text-inner">   
       <p>填入領取的幸運碼，便可以獲得許願人的資料囉！</p>
     </div></div>
-    <img class="col-sm-12 col-xs-12" src="/images/catch/dialog.png">
   </div>
   <div id="catch-girl" class="col-sm-12 col-xs-6">
     <img src="/images/catch/girl.png">

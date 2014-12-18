@@ -8,7 +8,7 @@
     <script src="/js/angular.min.js"></script>
     <script src="/js/catch.js"></script>
     <script src="/js/wow.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery-ui.min.js"></script>
     <script src="/js/smoothScrolling.js"></script>
     <script src="/js/animate.js"></script>
@@ -23,9 +23,9 @@
   </head>
 <body ng-app="catch" ng-init="section = 'index'">
   <div class="container">
-  <% include ../views/main/nav %>
   <!--<div id="ntusa"></div>-->
-  <section id="home" class="col-sm-12 col-xs-12 top-10 smooth" ng-show="section == 'index'">
+  
+  <section id="home" class="col-sm-12 col-xs-12 top-10" ng-show="section == 'index'">
     <% include ../views/main/index %>
   </section>
 
@@ -34,9 +34,12 @@
     <% include ../views/main/info %>
   </section>
   -->
-  <section id="catch" class="col-sm-12 col-xs-12 top-10 last smooth" ng-controller="CatchController">
+  <section id="catch" class="col-sm-12 col-xs-12  last smooth" ng-controller="CatchController" ng-show="section == 'catch'">
     <% include ../views/main/catch %>
   </section>
+  <footer>
+    <img src="/images/ntusa.png">
+  </footer>
 </div>
 </body>
 </html>
