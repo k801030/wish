@@ -2,6 +2,8 @@ html, body {
   color: #ddd;
   height: 100%;
   background-color: #0c1425;
+  background-image: url('/images/bg.jpg');
+  background-size: cover;
 }
 
 nav {
@@ -25,7 +27,7 @@ nav > .logo {
   padding: 0px;
   margin: 0px;
   width: 100%;
-  z-index: 0;
+  z-index: ;
 }
 
 div {
