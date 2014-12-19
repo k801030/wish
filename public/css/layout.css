@@ -53,8 +53,6 @@ section.last {
   float: none;
 }
 
-@media screen and (min-width: 701px) {
-
 .top-5 {
   margin-top: 5%;
 }
@@ -70,6 +68,9 @@ section.last {
 .bottom-10 {
   margin-bottom: 10%;
 }
+@media screen and (min-width: 701px) {
+
+
 }
 /*  Position  */
 
@@ -291,4 +292,11 @@ footer > img {
 .log {
   position: absolute;
   z-index: 10;
+}
+
+.v-outer {
+
+}
+.v-inner {
+
 }
