@@ -2,27 +2,32 @@ html, body {
   font-family: 'Microsoft YaHei', sans-serif;
 }
 
-#info-dialog > .text,
-#catch-dialog > .text {
+#info-dialog,
+#catch-dialog {
   color: #0c2640;
   word-wrap: break-word; word-break: normal;
 }
 .my-form-control {
   color: #193d5f;
+  font-size: 18px;
 }
 
 .form-control::-moz-placeholder {
+  font-size: 18px;
   color: #104e84;
   opacity: 0.5;
 }
 .form-control:-ms-input-placeholder {
+  font-size: 18px;
   color: #104e84;
   opacity: 0.5;
 }
 .form-control::-webkit-input-placeholder {
+  font-size: 18px;
   color: #104e84;
   opacity: 0.5;
 }
+
 
 #ntusa {
   position: fixed;
@@ -132,4 +137,14 @@ html, body {
   height: 42px;
   background-color: rgba(255,255,255,0.8);
   color: #0c2640;
+  font-size: 18px;
+}
+
+.arrow {
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  border-left: 25px solid transparent;
+  border-top: 25px solid rgba(255,255,255,0.8);
+  border-right: 25px solid transparent;
 }

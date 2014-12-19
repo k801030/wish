@@ -8,6 +8,8 @@ $(function (){
   wow.init();
   //SmoothScrolling();
   setBackgroundHeight();
+
+  
   var ntusa_start = $('#ntusa').offset().top;
   $( window ).scroll(function() {
     var speed = 100;
@@ -23,7 +25,7 @@ $(function (){
       'background-position-y':  move + 'px'
     },20,'linear');
     console.log('d');*/
-    setBackgroundHeight();
+    //setBackgroundHeight();
     var elem = $('#home-logo, #home-time');
     setFadeOut(elem, position);
     
@@ -39,6 +41,10 @@ $(function (){
     elem.css('opacity',(end_pos - position)/(end_pos - start_pos));
   }
   
-  
+  function move(pos) {
+    $('body, html').animate({
+        'background-position-y':  pos + 'px'
+      },2000,'linear');
+  }
 
 });

@@ -166,7 +166,7 @@ footer > img {
 
 @media (min-width: 768) {
   span.title {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   p {
@@ -175,7 +175,7 @@ footer > img {
 }
 @media (min-width: 992px) {
   span.title {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   p {
@@ -185,7 +185,7 @@ footer > img {
 
 @media (min-width: 1314px) {
   span.title {
-    font-size: 42px;
+    font-size: 32px;
   }
 
   p {
@@ -193,17 +193,22 @@ footer > img {
   }
 }
 
+.right-50 {
+  right: 50%;
+}
+
+.margin-left-50 {
+  margin-left: 50%;
+}
+
+
 /* for tablet */
 @media screen and (min-width: 701px) {
-  #info-girl {
-    position: absolute;
-    left: 10%;
-    bottom: 25%;
+  #info-girl > img {
+    width: 50%;
   }
-
   #info-dialog {
-    position: absolute;
-    bottom: 25%;
+    bottom: 20%;
   }
 
   
@@ -216,20 +221,17 @@ footer > img {
 
   }
   
-
-  #catch-before,
-  #catch-after {
-    position: absolute;
-  }
 }
 
-#catch-dialog {
+#info-dialog {
   overflow: auto;
   background-color: rgba(255,255,255,0.8);
   border-radius: 5px;
 }
 /* for mobile */
 @media screen and (max-device-width: 480px){
+
+
   section {
     padding-bottom: 12%;
   }
@@ -284,10 +286,6 @@ footer > img {
     margin-top: 5%;
   }
 
-  #catch-before,
-  #catch-after {
-    position: absolute;
-  }
 }
 
 .log {
