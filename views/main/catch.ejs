@@ -10,7 +10,7 @@
     <form ng-submit="check()" class="col-sm-9 col-xs-10 center my-form">
     <input class="form-control my-form-control" type="text" placeholder="填入幸運碼" ng-model="code" ng-change="clearWaring()" ng-focus="clearWaring()">
     <button type="submit" class="btn my-btn btn-default form-control my-form-control">送出</button>
-    <div ng-show="showMsg">
+    <div ng-show="showMsg" class="message">
       {{ message }}
     </div>
     
