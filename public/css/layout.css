@@ -143,7 +143,7 @@ span.title {
   font-weight: 700;
 }
 span.title {
-  font-size: 22px;
+  font-size: 16px;
 }
 
 p {
@@ -232,6 +232,9 @@ footer > img {
 /* for mobile */
 @media screen and (max-device-width: 480px){
 
+  .hide-m {
+    display: none;
+  }
 
   section {
     padding-bottom: 12%;
@@ -276,9 +279,7 @@ footer > img {
   }
 
   #catch-before, #catch-after {
-    position: relative;
-    margin-top: 5%;
-  }
+    position: relative  }
 
   #home-logo {
     margin-top: 10%;
@@ -300,3 +301,4 @@ footer > img {
 .v-inner {
 
 }
+

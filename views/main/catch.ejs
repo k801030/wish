@@ -3,11 +3,11 @@
 
 
 
-<div class="col-offset-3 col-sm-6 col-xs-12 center v-outer top-10 wow fadeInUp" data-wow-duration="1.5s">
+<div class="col-offset-3 col-sm-6 col-xs-12 center v-outer wow fadeInUp" data-wow-duration="1.5s">
   <div id="catch-before" class="col-sm-12 col-xs-12" ng-show="!finish" ng-class="{'fadeOut': enter,'animated': enter}">
     <h1>找到你的許願人</h1>
     <h4>填入領取的幸運碼，便可以獲得許願人的資料囉！</h4>
-    <form ng-submit="check()" class="col-sm-9 col-xs-8 center my-form">
+    <form ng-submit="check()" class="col-sm-9 col-xs-10 center my-form">
     <input class="form-control my-form-control" type="text" placeholder="填入幸運碼" ng-model="code" ng-change="clearWaring()" ng-focus="clearWaring()">
     <button type="submit" class="btn my-btn btn-default form-control my-form-control">送出</button>
     <div ng-show="showMsg">
@@ -31,10 +31,11 @@
       </tr>
       
     </table>
+    <button type="button" class="col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 btn my-btn btn-default form-control my-form-control" onclick="location.href='./'">返回</button>
   </div>
 </div>
 
-<div class="col-sm-3">
+<div class="col-sm-3 hide-m">
   <div class="col-sm-12 col-xs-12 wow zoomIn" data-wow-duration="1s" data-wow-delay="1s">
     <div id="info-dialog" class="dialog">
         <h3>貼心小叮嚀</h3>
